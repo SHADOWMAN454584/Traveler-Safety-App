@@ -3,10 +3,7 @@ const bcrypt = require('bcryptjs');
 require('dotenv').config();
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(process.env.MONGO_URI);
 
 // Import models (simplified versions for seeding)
 const UserSchema = new mongoose.Schema({
